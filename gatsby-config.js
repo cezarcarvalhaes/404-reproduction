@@ -28,6 +28,14 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+			resolve: 'gatsby-plugin-s3',
+			options: {
+				bucketName: process.env.S3_BUCKET_NAME,
+				protocol: 'https',
+				hostname: 'd2bsv9zqdmzu1s.cloudfront.net',
+			},
+		},
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
